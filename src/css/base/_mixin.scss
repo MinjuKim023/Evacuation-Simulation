@@ -1,0 +1,60 @@
+@mixin title-text {
+  font: {
+    size: 3rem;
+    weight: bold;
+  }
+}
+
+@mixin text-animation {
+  transform: translate3d(0px, 100%, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease-in-out;
+  transition-delay: 0.8s;
+}
+
+@mixin text-underline {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  width: fit-content;
+  margin-top: 1.5rem;
+  position: relative;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $color-black;
+    position: absolute;
+    bottom: -5px;
+    transition: background-color 0.3s ease;
+  }
+
+  &:hover {
+    &::after {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+  .contact-icon {
+    font-size: 1rem;
+  }
+
+  @include dvLaptop {
+    h1 {
+      font-size: 2rem;
+    }
+    .contact-icon {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@mixin borderLine {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+}

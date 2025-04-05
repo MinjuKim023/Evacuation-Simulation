@@ -1,0 +1,9 @@
+.padding-container {
+  padding: 0 1.5rem;
+}
+
+@include dvTablet {
+  .padding-container {
+    padding: 0 2.5rem;
+  }
+}
