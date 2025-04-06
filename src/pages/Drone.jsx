@@ -7,7 +7,7 @@ const Drone = () => {
 
   useEffect(() => {
     // WebSocket 연결 (친구 노트북의 IP 주소와 포트를 사용)
-    const socket = new WebSocket("ws://10.0.0.38:8080/stream"); // ← 이 부분은 너한테 맞게 바꿔줘
+    const socket = new WebSocket("ws://10.0.0.2:8080/stream/3"); // ← 이 부분은 너한테 맞게 바꿔줘
 
     // 바이너리 데이터를 받겠다고 설정
     socket.binaryType = "arraybuffer";

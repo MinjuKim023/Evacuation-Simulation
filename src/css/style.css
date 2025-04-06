@@ -239,15 +239,58 @@ video::-webkit-media-controls {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  gap: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  position: relative;
 }
 .live-view h2 {
   font-size: 1.25rem;
   font-weight: 600;
+  text-transform: capitalize;
+}
+.live-view .live-view-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.live-view .live-view-container-images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0.5rem;
+  width: 100%;
+  height: 100%;
+}
+.live-view .live-view-container-images img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .live-view-parent {
   width: 100%;
   height: 100%;
+}
+
+.live-view-detail {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.live-view-detail-container {
+  width: 70%;
+  height: 80%;
+  background-color: blue;
 }
 
 .main-layout {
