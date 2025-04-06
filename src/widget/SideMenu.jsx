@@ -37,11 +37,7 @@ const SideMenu = () => {
                 <LuCarTaxiFront className="icon" />
               </Link>
             </li>
-            <li>
-              <Link to={"/car-person"}>
-                <LuCarFront className="icon" />
-              </Link>
-            </li>
+
             <li>
               <Link to={"/description"}>
                 <IoIosHelpCircle className="icon" />

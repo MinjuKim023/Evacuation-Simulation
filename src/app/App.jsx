@@ -1,9 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "../pages/Home";
 import MainLayout from "./router/MainLayout";
-import Drone from "../pages/Drone";
-import CarAI from "../pages/CarAI";
-import CarPerson from "../pages/CarPerson";
 import Agents from "../pages/Agents";
 import Description from "../pages/Description";
 

@@ -9,17 +9,20 @@ const LiveView = ({ streamList, category }) => {
   const [imageSrcs, setImageSrcs] = useState(
     Array(streamList.length).fill(null)
   );
+  const [index, setIndex] = useState();
+  const [currentStreamUrl, setCurrentStreamUrl] = useState(null);
+
   const location = useLocation();
   const navigate = useNavigate();
   const currentLocation = location.pathname.split("/")[1];
-  const [index, setIndex] = useState();
 
   const socketsRef = useRef([]);
 
   const agentMatch = useMatch(`/${currentLocation}/:id`);
 
-  const onViewClicked = (i) => {
+  const onViewClicked = (i, src) => {
     setIndex(i);
+    setCurrentStreamUrl(streamList[i].url);
     navigate(`/${currentLocation}/${i}`);
   };
 
@@ -32,10 +35,10 @@ const LiveView = ({ streamList, category }) => {
   useEffect(() => {
     const newSockets = streamList.map((stream, i) => {
       const socket = new WebSocket(stream.url);
+
       socket.binaryType = "arraybuffer";
 
       socket.onmessage = (event) => {
-        console.log("WebSocket connected ✅");
         const blob = new Blob([event.data], { type: "image/jpeg" });
         const imageUrl = URL.createObjectURL(blob);
 
@@ -75,7 +78,7 @@ const LiveView = ({ streamList, category }) => {
             {imageSrcs.map((src, i) => (
               <motion.div
                 className="view-box"
-                onClick={() => onViewClicked(i)}
+                onClick={() => onViewClicked(i, src)}
                 layoutId={`view-${i}`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -94,6 +97,7 @@ const LiveView = ({ streamList, category }) => {
           <LiveViewDetail
             agentMatch={agentMatch}
             currentLocation={currentLocation}
+            currentStreamUrl={currentStreamUrl}
             index={index}
           />
         </div>
