@@ -35,6 +35,7 @@ const LiveView = ({ streamList, category }) => {
       socket.binaryType = "arraybuffer";
 
       socket.onmessage = (event) => {
+        console.log("WebSocket connected ✅");
         const blob = new Blob([event.data], { type: "image/jpeg" });
         const imageUrl = URL.createObjectURL(blob);
 

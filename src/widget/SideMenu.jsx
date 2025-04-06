@@ -3,6 +3,7 @@ import { GiHamburgerMenu, GiDeliveryDrone } from "react-icons/gi";
 import { LuCarTaxiFront, LuCarFront } from "react-icons/lu";
 import { FaHome } from "react-icons/fa";
 import { IoIosInformationCircleOutline } from "react-icons/io";
+import { IoIosHelpCircle } from "react-icons/io";
 
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -39,6 +40,11 @@ const SideMenu = () => {
             <li>
               <Link to={"/car-person"}>
                 <LuCarFront className="icon" />
+              </Link>
+            </li>
+            <li>
+              <Link to={"/description"}>
+                <IoIosHelpCircle className="icon" />
               </Link>
             </li>
           </ul>

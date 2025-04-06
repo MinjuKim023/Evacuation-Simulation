@@ -5,6 +5,7 @@ import Drone from "../pages/Drone";
 import CarAI from "../pages/CarAI";
 import CarPerson from "../pages/CarPerson";
 import Agents from "../pages/Agents";
+import Description from "../pages/Description";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
             element: <Agents />,
           },
         ],
+      },
+      {
+        path: "/description",
+        element: <Description />,
       },
     ],
   },
