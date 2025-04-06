@@ -1,15 +1,15 @@
 ## Development
 
-## checkout the codebase
+## Checkout the codebase
 git clone
 
-## install project dependencies
+## Install project dependencies
 npm install
 
-## run react
+## Run react
 npm run dev
 
-## build compiled css and js
+## Build compiled css and js
 npm run build
 
 ## Dependencies
