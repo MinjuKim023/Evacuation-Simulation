@@ -193,6 +193,95 @@ Another major hurdle was __connecting Unity’s simulation to a web dashboard__.
 
 Eventually, we implemented a workaround using Unity screen capture and real-time messaging via the React server, allowing our web interface to display the active simulation like an emergency command center.
 
+
+## Accomplishments That We're Proud Of 
+
+In this limited-time hackathon, we poured in our full focus and effort—__a project built with real teamwork, persistence, and care__. From the beginning, we intentionally chose a more complex and open-ended challenge. We knew it wouldn’t be easy, but we wanted to push ourselves to build something that felt thoughtful, immersive, and meaningful. 
+
+There were real difficulties along the way—__including one teammate’s GPU burning out during training__—but we stayed committed. We kept adapting, learning, and moving forward together. And through that, we created something we’re truly proud of. 
+
+ 
+
+- We used a __Unity Asset Store city template__ with a __dark, cyberpunk “Gotham-like” vibe__—which turned out to be a perfect fit for our disaster response theme. 
+
+- All core visual elements—__cars, drones, trees, powerlines__, and other props—were __AI-generated__ using Meshy.ai to match the mood and scale of the city. 
+
+- To take it even further, we used __Udio__ to generate __original sound effects and music__, carefully aligned with the urban disaster aesthetic. The sound design helped elevate the urgency and cinematic feel of the simulation. 
+
+ 
+
+What makes us proud is not just the technical execution—but how much __heart__ we put into every part of the experience. We genuinely cared about building something engaging, dramatic, and meaningful—even when the clock was ticking. Even with all the challenges—technical errors, limited time, and hardware failures—we enjoyed every part of working together. We’re proud that we __chose the hard way__, not because we had to, but because we believed in the idea and in each other. 
+
+ 
+
+## What We Learned 
+
+This hackathon was a powerful reminder of how far rapid prototyping has come—generative AI tools supercharged our creative process. From Meshy.ai for generating environment assets to Udio for designing immersive soundscapes, we discovered how accessible and exciting it is to bring big ideas to life in a short time. 
+
+ 
+
+We also learned how to connect Unity simulations to a live website using React and WebSockets, allowing us to stream real-time POVs from both the evacuation car and the drone agents. Also, we learned how to integrate multiple technologies smoothly—from game engines to web frontends—to simulate a real-time rescue system with multi-agent logic. 
+
+ 
+
+Another key takeaway was building intelligent agents with complex, autonomous behaviors is hard—especially under time pressure. Training was resource-intensive (one of our GPUs literally overheated and stopped working), and we had to make critical design pivots to keep going. 
+
+ 
+
+Most importantly, this experience reminded us of the true spirit of a hackathon: __not giving up__. Even when challenges seemed impossible, we kept moving forward as a team—and often found better solutions by staying flexible and working together. 
+
+
+
+## What's Next for Multi-Agent Systems 
+
+While we're proud of what we accomplished during this hackathon, we also see exciting opportunities for further development and expansion of our system. Given the intense time and resource constraints, we had to make strategic choices—and we believe the decisions we made were the right ones for this context. But there’s still so much more we’re excited to explore moving forward. 
+
+ 
+
+1. __Scaling Up: More Agents, Greater Efficiency__ 
+
+Our system currently includes __eight aerial drone agents and one autonomous ground vehicle__—meeting the case requirement of at least three communicating agents. However, in __real-world disaster response scenarios__, increasing the number of autonomous agents could __dramatically improve performance__. 
+
+ 
+
+Adding more agents would allow for a __denser mesh of coverage__, accelerating: 
+
+- Hazard detection 
+
+- Route discovery 
+
+- Real-time decision-making 
+
+Especially in large-scale evacuations, __more agents means more eyes in the sky and more coordination on the ground__, reducing human risk and improving outcomes. 
+
+ 
+
+We believe future versions of EvacSim could explore __swarm-based intelligence__ to enhance coordination between agents, dynamically adjust roles, and respond even faster to unexpected changes. 
+
+ 
+
+2. __Smarter Agents: Local Training for Complex Behaviors__ 
+
+We originally planned to train custom intelligent agents using Unity ML-Agents and .onnx brain files, but this required computational resources we simply didn’t have. One of our team’s GPUs failed mid-training, and with limited time and energy, we pivoted to using __Unity AI Navigation 2.0 (NavMesh)__. 
+
+ 
+
+While NavMesh was the most practical option for the hackathon, we know it’s only the beginning. __In the future, with more GPU access, time, and stability__, we hope to: 
+
+Train and fine-tune agents in a local reinforcement learning environment 
+
+Introduce behavioral variance among agents 
+
+Enable fully autonomous, data-driven learning and decision-making 
+
+ 
+
+We also acknowledge the challenges: local training demands proper tuning, error handling, memory management, and a lot of trial and error. In a hackathon setting, we believe choosing NavMesh was the right call—it allowed us to meet the requirements and still build something functional, immersive, and intelligent. 
+
+ 
+
+
+
 ## Development
 
 ## Checkout the codebase
