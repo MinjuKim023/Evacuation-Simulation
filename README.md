@@ -106,7 +106,7 @@ This image captures the __drone-level city view__ where red X signs indicate blo
 
 __8 Drone Agents__: Individually deployed to scan the area from above (they don’t share a “brain”) and detect hazards like fallen trees or traffic jams. They identify and flag inaccessible roads with red Xs. These obstacles are randomized each simulation round, so the exit route changes dynamically. 
 
-[https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure5.png]("Figure 5") 
+![Figure 5](https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure5.png) 
 
 !["Drone agent flying in the city"](https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure6.png "Figure 6")
 
