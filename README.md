@@ -1,5 +1,13 @@
 # EvacSim: Evacuation Simulation using MAS (Multi-Agents System)
 
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=hO1vGT5lekk" target="_blank">
+    <img src="https://img.youtube.com/vi/hO1vGT5lekk/0.jpg" alt="Watch Demo Video" width="600"/>
+    <br><br>
+    <strong>▶️ Watch our demonstration video with music</strong>
+  </a>
+</p>
+
 ## Inspiration
 
 In life-threatening disasters like hurricanes, earthquakes, and nuclear emergencies, __every second counts__. Delayed response can cost lives, and traditional emergency systems often struggle to keep up—especially under chaotic, fast-changing conditions. 
