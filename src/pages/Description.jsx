@@ -60,7 +60,7 @@ const Description = () => {
 
         <div className="section">
           {" "}
-          <h2>Accomplishments that we're proud of</h2>
+          <h1>Accomplishments that we're proud of</h1>
           <p>
             We divided responsibilities effectively, but more importantly, we
             supported each other throughout the process. Even when working on

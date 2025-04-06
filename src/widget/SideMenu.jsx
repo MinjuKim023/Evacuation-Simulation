@@ -11,8 +11,17 @@ import { Link } from "react-router-dom";
 
 const SideMenu = () => {
   const [menu, setMenu] = useState(false);
+  const [information, setInformation] = useState(false);
   const handleMenu = () => {
     setMenu((prev) => !prev);
+  };
+
+  const mouseEnter = () => {
+    setInformation(true);
+  };
+
+  const mouseLeave = () => {
+    setInformation(false);
   };
   return (
     <nav className="side">
@@ -57,10 +66,32 @@ const SideMenu = () => {
           >
             <div className="side-right-container">
               <div className="title">
-                <h1>MAS</h1>
-                <IoIosInformationCircleOutline className="info-icon" />
+                <h1>EvacSim</h1>
+                <IoIosInformationCircleOutline
+                  className="info-icon"
+                  onMouseEnter={() => mouseEnter()}
+                  onMouseLeave={() => mouseLeave()}
+                />
               </div>
             </div>
+            {information && (
+              <div className="information">
+                <ul>
+                  <li>
+                    <span>Main Page:</span> Shows the AI-determined shortest
+                    path to the nearest exit based on current conditions.
+                  </li>
+                  <li>
+                    <span>Drone Page:</span> Displays live feeds from 8 drones
+                    monitoring major roads from above.
+                  </li>
+                  <li>
+                    <span>Car AI Page:</span> Displays camera footage following
+                    the AI-driven car along its route.
+                  </li>
+                </ul>
+              </div>
+            )}
           </motion.div>
         )}
       </AnimatePresence>

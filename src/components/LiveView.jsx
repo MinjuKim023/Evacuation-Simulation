@@ -10,7 +10,6 @@ const LiveView = ({ streamList, category }) => {
     Array(streamList.length).fill(null)
   );
 
-  console.log(imageSrcs);
   const [index, setIndex] = useState();
   const [currentStreamUrl, setCurrentStreamUrl] = useState(null);
   const location = useLocation();

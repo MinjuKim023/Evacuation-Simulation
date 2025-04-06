@@ -23,7 +23,7 @@ const LiveViewDetail = ({
     socket.binaryType = "arraybuffer";
 
     socket.onopen = () => {
-      console.log("WebSocket connected in liveviewdetail✅");
+      // console.log("WebSocket connected in liveviewdetail✅");
     };
 
     socket.onmessage = (event) => {
