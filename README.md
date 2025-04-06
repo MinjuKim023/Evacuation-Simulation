@@ -19,16 +19,16 @@ At the same time, public acceptance of autonomous systems is rising, especially 
 
 ## References 
 
-Fatma et al., 2022 (EMS Response Times) 
+1. __Fatma et al., 2022 (EMS Response Times)__ 
  https://www.sciencedirect.com/science/article/pii/S2666520423001911 
 
-ASCE, 2022 (Autonomous Vehicles in Emergency Evacuation) 
+2. __ASCE, 2022 (Autonomous Vehicles in Emergency Evacuation)__ 
  https://ascelibrary.org/doi/10.1061/9780784485514.050 
 
-Zhao et al., 2023 (Public Acceptance of Autonomous Vehicles) 
+3. __Zhao et al., 2023 (Public Acceptance of Autonomous Vehicles)__ 
  https://www.sciencedirect.com/science/article/pii/S0386111223000456 
 
-Chowdhury et al., 2022 (Drone Use in Disaster Response – Lit Review) 
+4. __Chowdhury et al., 2022 (Drone Use in Disaster Response – Lit Review)__ 
  https://onlinelibrary.wiley.com/doi/10.1111/itor.13484 
 
  
@@ -59,7 +59,7 @@ We built __EvacSim__ in Unity using a custom-designed city map with roads, cars,
 
  
 
-## Agent Model Design 
+### Agent Model Design 
 
 Initially, we planned to train custom AI agents using reinforcement learning and export their decision-making logic as .onnx (Open Neural Network Exchange) brain files. However, due to time constraints and unexpected training errors during the hackathon, we pivoted to using __Unity’s AI Navigation 2.0 system (NavMesh)__ to simulate pathfinding. 
 
@@ -102,7 +102,7 @@ This image captures the __drone-level city view__ where red X signs indicate blo
 - This information is then __shared with the car agent__, enabling it to find a dynamic escape route with minimal delay. 
 
 
-## Agent Behavior 
+### Agent Behavior 
 
 __8 Drone Agents__: Individually deployed to scan the area from above (they don’t share a “brain”) and detect hazards like fallen trees or traffic jams. They identify and flag inaccessible roads with red Xs. These obstacles are randomized each simulation round, so the exit route changes dynamically. 
 
@@ -115,7 +115,7 @@ Picture
 PictureOur car agent in the city 
 
 
-## Live Visualization via Website 
+### Live Visualization via Website 
 
 We connected Unity with a __React-based website__ using WebSocket: 
 
