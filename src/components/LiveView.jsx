@@ -9,12 +9,15 @@ const LiveView = ({ streamList, category }) => {
   const [imageSrcs, setImageSrcs] = useState(
     Array(streamList.length).fill(null)
   );
+
+  console.log(imageSrcs);
   const [index, setIndex] = useState();
   const [currentStreamUrl, setCurrentStreamUrl] = useState(null);
-
   const location = useLocation();
   const navigate = useNavigate();
   const currentLocation = location.pathname.split("/")[1];
+
+  const isCarAi = streamList.length === 1;
 
   const socketsRef = useRef([]);
 
@@ -71,10 +74,19 @@ const LiveView = ({ streamList, category }) => {
 
   return (
     <div className="live-view">
-      <h2>{category} Live Feed</h2>
+      <h2>
+        {category} Live Feed{" "}
+        {imageSrcs.some(Boolean) ? <span className="record-dot"></span> : null}
+      </h2>
       {imageSrcs.some(Boolean) ? (
         <div className="live-view-container">
-          <motion.div className="live-view-container-images">
+          <motion.div
+            className={` ${
+              isCarAi
+                ? "live-view-container-car-images"
+                : "live-view-container-images"
+            }`}
+          >
             {imageSrcs.map((src, i) => (
               <motion.div
                 className="view-box"
@@ -94,12 +106,14 @@ const LiveView = ({ streamList, category }) => {
             ))}
           </motion.div>
 
-          <LiveViewDetail
-            agentMatch={agentMatch}
-            currentLocation={currentLocation}
-            currentStreamUrl={currentStreamUrl}
-            index={index}
-          />
+          {!isCarAi ? (
+            <LiveViewDetail
+              agentMatch={agentMatch}
+              currentLocation={currentLocation}
+              currentStreamUrl={currentStreamUrl}
+              index={index}
+            />
+          ) : null}
         </div>
       ) : (
         <Lottie options={defaultOptions} height={200} width={200} />

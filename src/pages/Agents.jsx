@@ -10,14 +10,15 @@ const Agents = () => {
     id: i + 1,
     url: `ws://10.0.0.2:8080/drone${i + 1}`,
   }));
-
-  const carAIStreams = Array.from({ length: 8 }, (_, i) => ({
-    id: i + 1,
-    url: `ws://10.0.0.2:8080/ai${i + 1}`,
-  }));
+  const carStreams = [
+    {
+      id: 1,
+      url: "ws://10.0.0.2:8080/ai1",
+    },
+  ];
 
   const selectedStreams =
-    agent === "drone" ? droneStreams : agent === "car-ai" ? carAIStreams : [];
+    agent === "drone" ? droneStreams : agent === "car-ai" ? carStreams : [];
 
   return (
     <div className="live-view-parent">
