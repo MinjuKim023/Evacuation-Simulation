@@ -5,7 +5,7 @@
 In life-threatening disasters like hurricanes, earthquakes, and nuclear emergencies, __every second counts__. Delayed response can cost lives, and traditional emergency systems often struggle to keep up—especially under chaotic, fast-changing conditions. 
 
 A 2022 study found that average EMS response times are __7–9 minutes in urban areas__ and up to __13–19 minutes in rural regions__, a critical delay when immediate evacuation or medical assistance is needed (Fatma et al., 2022). 
-!["Sequence of events comprising the time frame from a received emergency call to emergency medical communication centre (EMCC) until the first of all involved actors; emergency medical services (EMS); fire and rescue services (FRS); and voluntary first responders (VFR), arrives at the scene."](https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure1.jpg "Figure 1")
+![Sequence of events comprising the time frame from a received emergency call to emergency medical communication centre (EMCC) until the first of all involved actors; emergency medical services (EMS); fire and rescue services (FRS); and voluntary first responders (VFR), arrives at the scene.](https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure1.jpg "Figure 1")
 
 Meanwhile, research by the American Society of Civil Engineers (ASCE) shows that __autonomous vehicles significantly reduce evacuation clearance times__, thanks to faster decision-making and real-time route optimization—making them a powerful tool for life-saving operations (ASCE, 2022). 
  
@@ -67,7 +67,7 @@ Even though the NavMesh allowed the evacuation vehicle to find the safest path, 
 
  
 
-!["Road Network & Evacuation Map (Top-down)"](https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure2.png "Figure 2")
+![Road Network & Evacuation Map (Top-down)](https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure2.png "Figure 2")
 
 This image shows the road system modeled using __network science principles__. 
 
@@ -81,7 +81,7 @@ Each simulation round randomly toggles some red Xs on/off to simulate changing d
 
  
 
-!["Evacuation Vehicle POV (Simulation Start)"](https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure3.png "Figure 3")
+![Evacuation Vehicle POV (Simulation Start)](https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure3.png "Figure 3")
 
 This is the __first-person view__ from the AEV (autonomous car agent). 
 
@@ -91,7 +91,7 @@ This is the __first-person view__ from the AEV (autonomous car agent).
 
 - The urban environment is fully modeled in Unity, including vehicles, roadblocks, and lighting to reflect a real disaster setting. 
 
-!["Dynamic Map with Red X Toggle (Global View)"](https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure4.png "Figure 4") 
+![Dynamic Map with Red X Toggle (Global View)](https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure4.png "Figure 4") 
 
 This image captures the __drone-level city view__ where red X signs indicate blocked roads. 
 
@@ -108,11 +108,11 @@ __8 Drone Agents__: Individually deployed to scan the area from above (they don�
 
 ![Figure 5](https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure5.png) 
 
-!["Drone agent flying in the city"](https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure6.png "Figure 6")
+![Drone agent flying in the city](https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure6.png "Figure 6")
 
 - __1 Car Agent (AEV)__: Navigates from a safe zone to pick up evacuees based on the safest path calculated from the drone data. It follows NavMesh-based routes, and if a road is blocked, it reroutes using the drone’s updated map. 
 
-!["Our car agent in the city"](https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure7.png "Figure 7") 
+![Our car agent in the city](https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure7.png "Figure 7") 
 
 
 ### Live Visualization via Website 
