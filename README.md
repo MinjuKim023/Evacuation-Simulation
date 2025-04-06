@@ -158,7 +158,6 @@ With limited time left in the hackathon, we had to make a hard call: instead of 
 
 To stay on track, we quickly adapted our workflow and __divided the responsibilities across simulation, training, web, and design tasks__. By balancing technical development with visual storytelling and system integration, we were able to keep the project moving forward even under pressure. This flexible collaboration helped us stay aligned and responsive despite the technical setbacks.  
 
-⃣  
 
 3. __Unity-to-Web Real-Time Streaming__ 
 
