@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { GiHamburgerMenu, GiDeliveryDrone } from "react-icons/gi";
 import { LuCarTaxiFront, LuCarFront } from "react-icons/lu";
 import { FaHome } from "react-icons/fa";
@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 const SideMenu = () => {
   const [menu, setMenu] = useState(false);
   const [information, setInformation] = useState(false);
+  const [timer, setTimer] = useState("");
   const handleMenu = () => {
     setMenu((prev) => !prev);
   };
@@ -23,6 +24,40 @@ const SideMenu = () => {
   const mouseLeave = () => {
     setInformation(false);
   };
+
+  const socketRef = useRef(null);
+
+  useEffect(() => {
+    const socket = new WebSocket("ws://10.0.0.2:8081/time");
+
+    socket.binaryType = "arraybuffer";
+
+    socket.onopen = () => {
+      console.log("WebSocket connected in sideMenu");
+    };
+
+    socket.onmessage = (event) => {
+      const decoder = new TextDecoder("utf-8");
+      const timeStr = decoder.decode(event.data); // ✅ 문자열 변환
+      setTimer(timeStr); // React가 문제 없이 렌더링함
+    };
+
+    socket.onerror = (error) => {
+      console.error("WebSocket error:", error);
+    };
+
+    socket.onclose = () => {
+      console.log("WebSocket closed ❌");
+    };
+
+    socketRef.current = socket;
+
+    return () => {
+      if (socketRef.current) {
+        socketRef.current.close();
+      }
+    };
+  }, []);
   return (
     <nav className="side">
       <div className="side-left">
@@ -73,6 +108,7 @@ const SideMenu = () => {
                   onMouseLeave={() => mouseLeave()}
                 />
               </div>
+              <h1 className="timer">{timer === "" ? "Loading..." : timer}</h1>
             </div>
             {information && (
               <div className="information">

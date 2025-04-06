@@ -39,6 +39,7 @@
     &-container {
       margin-top: 2rem;
       padding-left: 1rem;
+      position: relative;
       .title {
         display: flex;
         align-items: center;
@@ -52,12 +53,19 @@
           cursor: pointer;
         }
       }
+      .timer {
+        margin-top: 2rem;
+        font-size: 2rem;
+        font-weight: 500;
+        color: red;
+      }
     }
     .information {
       background-color: white;
       color: black;
       padding: 1rem;
-
+      position: absolute;
+      top: 10%;
       ul {
         display: flex;
         flex-direction: column;

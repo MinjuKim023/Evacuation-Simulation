@@ -216,6 +216,7 @@ video::-webkit-media-controls {
 .side-right-container {
   margin-top: 2rem;
   padding-left: 1rem;
+  position: relative;
 }
 .side-right-container .title {
   display: flex;
@@ -229,10 +230,18 @@ video::-webkit-media-controls {
 .side-right-container .title .info-icon {
   cursor: pointer;
 }
+.side-right-container .timer {
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: 500;
+  color: red;
+}
 .side-right .information {
   background-color: white;
   color: black;
   padding: 1rem;
+  position: absolute;
+  top: 10%;
 }
 .side-right .information ul {
   display: flex;
@@ -249,6 +258,13 @@ video::-webkit-media-controls {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.home-video {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .home img {
   height: 100%;

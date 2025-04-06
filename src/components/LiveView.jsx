@@ -35,9 +35,10 @@ const LiveView = ({ streamList, category }) => {
   };
 
   useEffect(() => {
+    setImageSrcs(Array(streamList.length).fill(null));
+
     const newSockets = streamList.map((stream, i) => {
       const socket = new WebSocket(stream.url);
-
       socket.binaryType = "arraybuffer";
 
       socket.onmessage = (event) => {
@@ -45,7 +46,7 @@ const LiveView = ({ streamList, category }) => {
         const imageUrl = URL.createObjectURL(blob);
 
         setImageSrcs((prev) => {
-          if (prev[i]) URL.revokeObjectURL(prev[i]); // 메모리 해제
+          if (prev[i]) URL.revokeObjectURL(prev[i]);
           const updated = [...prev];
           updated[i] = imageUrl;
           return updated;
@@ -67,7 +68,6 @@ const LiveView = ({ streamList, category }) => {
 
     return () => {
       socketsRef.current.forEach((sock) => sock.close());
-      imageSrcs.forEach((url) => url && URL.revokeObjectURL(url));
     };
   }, [streamList]);
 
