@@ -108,7 +108,9 @@ __8 Drone Agents__: Individually deployed to scan the area from above (they donâ
 
 ![Figure 5](https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure5.png) 
 
-![Drone agent flying in the city](https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure6.png "Figure 6")
+<img src="https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure6.png" alt="Drone agent flying in the city" width="500"/>
+
+<p align="center"><em>Figure 6: Drone agent flying in the city</em></p>
 
 - __1 Car Agent (AEV)__: Navigates from a safe zone to pick up evacuees based on the safest path calculated from the drone data. It follows NavMesh-based routes, and if a road is blocked, it reroutes using the droneâ€™s updated map. 
 
