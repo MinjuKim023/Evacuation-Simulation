@@ -67,7 +67,7 @@ Even though the NavMesh allowed the evacuation vehicle to find the safest path, 
 
  
 
-!["Road Network & Evacuation Map (Top-down)"](https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure2.jpg "Figure 2")
+!["Road Network & Evacuation Map (Top-down)"](https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure2.png "Figure 2")
 
 This image shows the road system modeled using __network science principles__. 
 
@@ -81,7 +81,7 @@ Each simulation round randomly toggles some red Xs on/off to simulate changing d
 
  
 
-!["Evacuation Vehicle POV (Simulation Start)"](https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure3.jpg "Figure 3")
+!["Evacuation Vehicle POV (Simulation Start)"](https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure3.png "Figure 3")
 
 This is the __first-person view__ from the AEV (autonomous car agent). 
 
@@ -91,7 +91,7 @@ This is the __first-person view__ from the AEV (autonomous car agent).
 
 - The urban environment is fully modeled in Unity, including vehicles, roadblocks, and lighting to reflect a real disaster setting. 
 
-!["Dynamic Map with Red X Toggle (Global View)"](https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure4.jpg "Figure 4") 
+!["Dynamic Map with Red X Toggle (Global View)"](https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure4.png "Figure 4") 
 
 This image captures the __drone-level city view__ where red X signs indicate blocked roads. 
 
@@ -106,13 +106,13 @@ This image captures the __drone-level city view__ where red X signs indicate blo
 
 __8 Drone Agents__: Individually deployed to scan the area from above (they don’t share a “brain”) and detect hazards like fallen trees or traffic jams. They identify and flag inaccessible roads with red Xs. These obstacles are randomized each simulation round, so the exit route changes dynamically. 
 
-[https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure5]("Figure 5") 
+[https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure5.png]("Figure 5") 
 
-!["Drone agent flying in the city"](https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure6.jpg "Figure 6")
+!["Drone agent flying in the city"](https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure6.png "Figure 6")
 
 - __1 Car Agent (AEV)__: Navigates from a safe zone to pick up evacuees based on the safest path calculated from the drone data. It follows NavMesh-based routes, and if a road is blocked, it reroutes using the drone’s updated map. 
 
-!["Our car agent in the city"](https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure7.jpg "Figure 7") 
+!["Our car agent in the city"](https://github.com/ElijahJKim/Multi-Agent-System/blob/601e4ec79b2535e60bf4e1282f12a9a37827782f/figures/figure7.png "Figure 7") 
 
 
 ### Live Visualization via Website 
