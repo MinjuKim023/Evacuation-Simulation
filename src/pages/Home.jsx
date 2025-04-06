@@ -53,8 +53,9 @@ const Home = () => {
   return (
     <div className="home">
       {imageSrc ? (
-        <div
-          style={{ backgroundImage: `url(${imageSrc})` }}
+        <img
+          // style={{ backgroundImage: `url(${imageSrc})` }}
+          src={imageSrc}
           alt=""
           className="home-video"
         />
