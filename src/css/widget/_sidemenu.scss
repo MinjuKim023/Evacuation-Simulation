@@ -40,6 +40,9 @@
       margin-top: 2rem;
       padding-left: 1rem;
       position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
       .title {
         display: flex;
         align-items: center;
@@ -54,10 +57,58 @@
         }
       }
       .timer {
-        margin-top: 2rem;
-        font-size: 2rem;
-        font-weight: 500;
         color: red;
+        &-title {
+          text-decoration: underline;
+          color: red;
+        }
+        &-clock {
+          font-size: 2rem;
+          font-weight: 500;
+          color: red;
+        }
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        gap: 1rem;
+        li {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          .icon {
+            font-size: 2rem;
+          }
+          h2 {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            .record-dot {
+              width: 14px;
+              height: 14px;
+              background-color: rgb(0, 128, 0);
+              border-radius: 50%;
+              box-shadow: 0 0 8px 4px rgba(0, 120, 0, 0.6);
+              animation: greendot 1.2s infinite;
+              position: relative;
+              &:first-child {
+                margin-right: 0.5rem;
+              }
+            }
+            @keyframes greendot {
+              0% {
+                box-shadow: 0 0 0 0 rgba(0, 120, 0, 0.7);
+              }
+              50% {
+                box-shadow: 0 0 8px 6px rgba(0, 120, 0, 0.4);
+              }
+              100% {
+                box-shadow: 0 0 0 0 rgba(0, 120, 0, 0.7);
+              }
+            }
+          }
+        }
       }
     }
     .information {

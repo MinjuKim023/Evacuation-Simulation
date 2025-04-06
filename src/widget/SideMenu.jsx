@@ -108,7 +108,28 @@ const SideMenu = () => {
                   onMouseLeave={() => mouseLeave()}
                 />
               </div>
-              <h1 className="timer">{timer === "" ? "Loading..." : timer}</h1>
+              <div className="timer">
+                <h1 className="timer-title">EVACUATE NOW</h1>
+                <h1 className="timer-clock">
+                  {timer === "" ? "Loading..." : timer}
+                </h1>
+              </div>
+              <ul>
+                <li>
+                  {" "}
+                  <GiDeliveryDrone className="icon" />
+                  <h2>
+                    8 - Online <span className="record-dot"></span>
+                  </h2>
+                </li>
+                <li>
+                  {" "}
+                  <LuCarTaxiFront className="icon" />
+                  <h2>
+                    1 - Online <span className="record-dot"></span>
+                  </h2>
+                </li>
+              </ul>
             </div>
             {information && (
               <div className="information">
