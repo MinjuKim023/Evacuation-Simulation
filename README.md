@@ -8,7 +8,7 @@
   </a>
 </p>
  
-## Inspiration
+## Inspiration 
 
 In life-threatening disasters like hurricanes, earthquakes, and nuclear emergencies, __every second counts__. Delayed response can cost lives, and traditional emergency systems often struggle to keep up—especially under chaotic, fast-changing conditions. 
 
